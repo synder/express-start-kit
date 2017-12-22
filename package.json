@@ -32,6 +32,7 @@
     "babel-preset-stage-2": "*",
     "babel-preset-stage-3": "*",
     "chai": "*",
+    "del": "^3.0.0",
     "gulp": "*",
     "gulp-babel": "*",
     "gulp-mocha": "*",

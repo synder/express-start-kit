@@ -1,3 +1,4 @@
+const del = require('del');
 const gulp = require('gulp');
 const mocha = require('gulp-mocha');
 const babel = require('gulp-babel');
@@ -16,8 +17,11 @@ gulp.task('unit', function (done) {
 
 
 gulp.task('build', function (done) {
-  gulp.src(['./src/**/*.js', '!./src/**/*_test.js'])
-    .pipe(babel())
-    .pipe(gulp.dest('./dist'))
-    .on('end', done);
+  del('./dist').then(function () {
+    gulp.src(['./src/**/*.js', '!./src/**/*_test.js'])
+      .pipe(babel())
+      .pipe(gulp.dest('./dist'))
+      .on('end', done);
+  });
 });
+  
