@@ -1,0 +1,25 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CustomerSchema = undefined;
+
+var _mongoose = require('mongoose');
+
+var ObjectId = _mongoose.Schema.Types.ObjectId; /**
+                                                 * @author synder on 2017/2/17
+                                                 * @copyright
+                                                 * @desc
+                                                 */
+
+var CustomerSchema = new _mongoose.Schema({
+  status: { type: Number, required: true },
+  app_name: { type: String, required: true },
+  app_key: { type: String, required: true },
+  app_secret: { type: String, required: true },
+  create_time: { type: Date, required: true },
+  update_time: { type: Date, required: true }
+});
+
+exports.CustomerSchema = CustomerSchema;

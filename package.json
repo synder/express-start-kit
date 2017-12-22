@@ -1,0 +1,45 @@
+{
+  "name": "cxcb",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "gulp unit",
+    "dev": "NODE_ENV=dev babel-node ./src/bin/www.js",
+    "pre": "NODE_ENV=pre node ./dist/bin/www.js --name cxcb",
+    "pro": "NODE_ENV=pro pm2 start ./dist/bin/www.js --name cxcb",
+    "build": "NODE_ENV=pro gulp build"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "compression": "*",
+    "connect-timeout": "*",
+    "cookie-parser": "*",
+    "express": "*",
+    "lodash": "*",
+    "moment": "*",
+    "mongoose": "*",
+    "redis": "*",
+    "request-promise": "*",
+    "uuid": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-plugin-transform-runtime": "*",
+    "babel-plugin-transform-strict-mode": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-stage-1": "*",
+    "babel-preset-stage-2": "*",
+    "babel-preset-stage-3": "*",
+    "chai": "*",
+    "gulp": "*",
+    "gulp-babel": "*",
+    "gulp-mocha": "*",
+    "mockjs": "*",
+    "semver": "*",
+    "superagent": "*",
+    "supertest": "*"
+  },
+  "author": "synder",
+  "license": "ISC"
+}
